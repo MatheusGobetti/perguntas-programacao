@@ -1,123 +1,125 @@
 # Perguntas de Programação
 
-Aqui estão algumas perguntas comuns sobre programação:
+## O que é SQL injection?
 
-1. O que é SQL injection?
+Resposta: A injeção de SQL é um tipo de ataque cibernético usado para explorar vulnerabilidades em sistemas de gerenciamento de banco de dados. Basicamente, os hackers inserem códigos maliciosos em campos de entrada, como formulários da web, para enganar o sistema e obter acesso não autorizado ao banco de dados.
 
-Resposta:
+Por exemplo, imagine um site de login onde você digita seu nome de usuário e senha. Se o site não tiver proteção adequada contra injeção de SQL, um invasor poderia digitar algo como " ' OR '1'='1" no campo de senha. Isso pode enganar o sistema, fazendo com que ele interprete a entrada como uma parte legítima da consulta SQL, permitindo ao invasor acessar o sistema sem a senha correta.
 
-2. O que é escopo em JavaScript?
+Em resumo, a injeção de SQL é como um "truque" usado por hackers para enganar sistemas de banco de dados e obter acesso não autorizado ou manipular informações.
 
-Resposta:
-
-3. Explique o CSS "box model" e os componentes de layout que o compõem.
+## O que é escopo em JavaScript?
 
 Resposta:
 
-4. Como JavaScript e jQuery são diferentes?
+## Explique o CSS "box model" e os componentes de layout que o compõem.
 
 Resposta:
 
-5. O que é um Callback Hell?
+## Como JavaScript e jQuery são diferentes?
 
 Resposta:
 
-6. O que é Cross-Site Scripting (XSS)?
+## O que é um Callback Hell?
 
 Resposta:
 
-7. O que é Flux?
+## O que é Cross-Site Scripting (XSS)?
 
 Resposta:
 
-8. O que é Sass?
+## O que é Flux?
 
 Resposta:
 
-9. O que é encapsulamento?
+## O que é Sass?
 
 Resposta:
 
-10. Qual o ponto de se usar Redux?
+## O que é encapsulamento?
 
 Resposta:
 
-11. Explique a diferença entre null e undefined em JavaScript.
+## Qual o ponto de se usar Redux?
 
 Resposta:
 
-12. Liste as vantagens da arquitetura de microsserviços.
+## Explique a diferença entre null e undefined em JavaScript.
 
 Resposta:
 
-13. Quais são as vantagens do NoSQL sobre o RDBMS tradicional?
+## Liste as vantagens da arquitetura de microsserviços.
 
 Resposta:
 
-14. O que é programação reativa?
+## Quais são as vantagens do NoSQL sobre o RDBMS tradicional?
 
 Resposta:
 
-15. O que são os reducers no Redux?
+## O que é programação reativa?
 
 Resposta:
 
-16. Qual o papel do HTML na indexação de páginas por buscadores?
+## O que são os reducers no Redux?
 
 Resposta:
 
-17. Cite 3 conceitos da Programação Orientada a Objetos aplicada ao JavaScript.
+## Qual o papel do HTML na indexação de páginas por buscadores?
 
 Resposta:
 
-18. Quais os benefícios do TypeScript?
+## Cite 3 conceitos da Programação Orientada a Objetos aplicada ao JavaScript.
 
 Resposta:
 
-19. O que é uma interface no TypeScript?
+## Quais os benefícios do TypeScript?
 
 Resposta:
 
-20. Qual o significado de Mock?
+## O que é uma interface no TypeScript?
 
 Resposta:
 
-21. O que é o esquema do GraphQL?
+## Qual o significado de Mock?
 
 Resposta:
 
-22. O que é o Virtual DOM? Qual sua vantagem?
+## O que é o esquema do GraphQL?
 
 Resposta:
 
-23. O que é e como usar a convenção Block Element Modifier (BEM)?
+## O que é o Virtual DOM? Qual sua vantagem?
 
 Resposta:
 
-24. JavaScript: Explique como você pode usar funções JavaScript, como forEach, Map ou Reduce.
+## O que é e como usar a convenção Block Element Modifier (BEM)?
 
 Resposta:
 
-25. React: O que é e como você pode aproveitar as vantagens do PureComponent?
+## JavaScript: Explique como você pode usar funções JavaScript, como forEach, Map ou Reduce.
 
 Resposta:
 
-26. O que é serverless computing?
+## React: O que é e como você pode aproveitar as vantagens do PureComponent?
 
 Resposta:
 
-27. Quais são os tipos primitivos do JavaScript?
+## O que é serverless computing?
 
 Resposta:
 
-28. Qual a diferença entre inline e inline-block?
+## Quais são os tipos primitivos do JavaScript?
 
 Resposta:
 
-29. Qual a diferença entre elementos posicionados como relative, fixed, absolute e static?
+## Qual a diferença entre inline e inline-block?
 
 Resposta:
 
-30. Você pode explicar a diferença entre codificar um site para ser responsivo e usar uma estratégia mobile-first?
+## Qual a diferença entre elementos posicionados como relative, fixed, absolute e static?
+
+Resposta:
+
+## Você pode explicar a diferença entre codificar um site para ser responsivo e usar uma estratégia mobile-first?
 
 Resposta:
