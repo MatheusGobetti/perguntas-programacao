@@ -6,10 +6,20 @@ Este repositório é dedicado a responder perguntas de programação, DevOps e b
 
 As perguntas de front-end podem abordar tópicos como:
 
-- HTML
-- CSS
-- JavaScript
+- HTML, CSS, Javascript
 - Frameworks e bibliotecas populares, como React, Vue e Angular
+- Responsividade
+- Clean code e clean architecture
+- Gerenciadores de estado
+- Caching
+- Comportamentos de navegadores
+- Conceitos de Ecma Script
+- Testes unitários e de integração
+- Performance de aplicações
+- SPAs e SSRs
+- SEO, Acessibilidade e Otimizações
+- Segurança
+- Padrões de Projeto
 - Conceitos de design e UX
 
 ## Back-end
@@ -17,11 +27,21 @@ As perguntas de front-end podem abordar tópicos como:
 As perguntas de back-end podem abordar tópicos como:
 
 - APIs
-- Frameworks como Node.Js, Fastify, Nest.js, etc
 - Conceitos de POO e SOLID
-- Bancos de dados
-- Arquitetura limpa
-- Microserviços
+- Frameworks como Node.Js, Fastify, Nest.js, etc
+- Clean code e clean architecture
+- Microserviços e monolitos
+- Testes unitários e de integração
+- Segurança
+- Cache
+- Filas
+- Autenticação e autorização
+- Logs e monitoramento
+- Performance
+- Padrões de Projeto
+- Mensageria
+- GraphQL
+- WebSockets
 
 ## DevOps
 
@@ -33,6 +53,7 @@ As perguntas de DevOps podem abordar tópicos como:
 - Monitoramento e Logging
 - Docker
 - Kubernetes
+- Serverless
 - Ansible
 - Terraform
 - Jenkins
@@ -46,14 +67,21 @@ As perguntas de bancos de dados podem abordar tópicos como:
 
 - SQL
 - NoSQL
-- Bancos de dados relacionais como MySQL, PostgreSQL, Oracle, etc.
-- Bancos de dados NoSQL como MongoDB, Cassandra, Redis, etc.
-- Modelagem de dados
-- Normalização e desnormalização
+- Sharding
 - Indexação
+- Replicação
 - Transações
+- Escalabilidade
+- Particionamento
+- Modelagem de dados
+- Backup e restauração
 - Concorrência e bloqueio
-- Segurança em bancos de dados
 - Otimização de consultas
+- Segurança em bancos de dados
+- Consistência e disponibilidade
+- Normalização e desnormalização
+- Bancos de dados NoSQL como MongoDB, Cassandra, Redis, etc.
+- Bancos de dados relacionais como MySQL, PostgreSQL, Oracle, etc.
+
 
 Esperamos que este repositório seja uma fonte útil de conhecimento e discussão para todos os desenvolvedores.
