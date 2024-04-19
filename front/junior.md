@@ -615,15 +615,15 @@ Este é um exemplo básico de como você pode usar Redux em uma aplicação Java
 
 Resposta: Usar Redux Toolkit em vez de Redux puro oferece várias vantagens:
 
-#### 1. **Sintaxe simplificada**: Redux Toolkit fornece um conjunto de utilitários que simplificam muitas tarefas comuns do Redux, como a criação de reducers e actions. Isso reduz a quantidade de código necessário e torna o desenvolvimento mais rápido e menos propenso a erros.
+1. **Sintaxe simplificada**: Redux Toolkit fornece um conjunto de utilitários que simplificam muitas tarefas comuns do Redux, como a criação de reducers e actions. Isso reduz a quantidade de código necessário e torna o desenvolvimento mais rápido e menos propenso a erros.
 
-#### 2. **Configuração padrão de fluxo de dados**: Redux Toolkit configura automaticamente o fluxo de dados para você, seguindo as melhores práticas recomendadas pela equipe do Redux. Isso inclui o uso de Immer para permitir atualizações imutáveis no estado, bem como a configuração automática do Redux DevTools Extension para facilitar a depuração.
+2. **Configuração padrão de fluxo de dados**: Redux Toolkit configura automaticamente o fluxo de dados para você, seguindo as melhores práticas recomendadas pela equipe do Redux. Isso inclui o uso de Immer para permitir atualizações imutáveis no estado, bem como a configuração automática do Redux DevTools Extension para facilitar a depuração.
 
-#### 3. **Performance otimizada**: Redux Toolkit inclui funcionalidades como memoization de selectors e empacotamento de ações (action batching) para melhorar a performance da sua aplicação Redux.
+3. **Performance otimizada**: Redux Toolkit inclui funcionalidades como memoization de selectors e empacotamento de ações (action batching) para melhorar a performance da sua aplicação Redux.
 
-#### 4. **Módulo de slice**: O conceito de "slice" no Redux Toolkit permite definir partes independentes do estado e suas operações associadas em um único local. Isso promove a modularidade e a reutilização do código.
+4. **Módulo de slice**: O conceito de "slice" no Redux Toolkit permite definir partes independentes do estado e suas operações associadas em um único local. Isso promove a modularidade e a reutilização do código.
 
-#### 5. **Compatibilidade com ferramentas de desenvolvimento**: Redux Toolkit é compatível com ferramentas populares de desenvolvimento, como Redux DevTools Extension e Redux Toolkit RTK Query para gerenciamento de estado assíncrono e consulta de API.
+5. **Compatibilidade com ferramentas de desenvolvimento**: Redux Toolkit é compatível com ferramentas populares de desenvolvimento, como Redux DevTools Extension e Redux Toolkit RTK Query para gerenciamento de estado assíncrono e consulta de API.
 
 Em resumo, usar Redux Toolkit simplifica o desenvolvimento de aplicações Redux, reduzindo a complexidade e o boilerplate, ao mesmo tempo em que oferece um desempenho otimizado e compatibilidade com ferramentas de desenvolvimento essenciais.
 
@@ -717,15 +717,15 @@ Em resumo, o Redux Toolkit simplifica o desenvolvimento com Redux, reduzindo a q
 
 Resposta: Usar o Zustand em vez do Redux ou Redux Toolkit pode ser preferível por algumas razões:
 
-### 1. **Simplicidade e leveza:** Zustand é uma biblioteca mínima de gerenciamento de estado que oferece uma API simples e intuitiva. Ela possui menos conceitos abstratos e menos boilerplate em comparação com o Redux, o que torna mais fácil de aprender e usar.
+1. **Simplicidade e leveza:** Zustand é uma biblioteca mínima de gerenciamento de estado que oferece uma API simples e intuitiva. Ela possui menos conceitos abstratos e menos boilerplate em comparação com o Redux, o que torna mais fácil de aprender e usar.
 
-### 2. **Menos código e configuração:** Com Zustand, você pode definir o estado e as funções de atualização em um único lugar, sem a necessidade de criar actions, reducers, types e outras estruturas típicas do Redux. Isso resulta em menos código e configuração necessários para implementar o gerenciamento de estado em sua aplicação.
+2. **Menos código e configuração:** Com Zustand, você pode definir o estado e as funções de atualização em um único lugar, sem a necessidade de criar actions, reducers, types e outras estruturas típicas do Redux. Isso resulta em menos código e configuração necessários para implementar o gerenciamento de estado em sua aplicação.
 
-### 3. **Performance:** Zustand é otimizado para performance, oferecendo atualizações de estado eficientes e re-renderizações mínimas. Ele utiliza uma combinação de Immer para atualizações imutáveis e Proxy para rastrear mudanças no estado, o que pode resultar em um desempenho superior em comparação com algumas implementações do Redux.
+3. **Performance:** Zustand é otimizado para performance, oferecendo atualizações de estado eficientes e re-renderizações mínimas. Ele utiliza uma combinação de Immer para atualizações imutáveis e Proxy para rastrear mudanças no estado, o que pode resultar em um desempenho superior em comparação com algumas implementações do Redux.
 
-### 4. **Flexibilidade:** Zustand oferece uma abordagem mais flexível para o gerenciamento de estado. Você pode definir o estado e as funções de atualização de forma modular e granular, permitindo uma maior flexibilidade na organização e na estruturação do seu código.
+4. **Flexibilidade:** Zustand oferece uma abordagem mais flexível para o gerenciamento de estado. Você pode definir o estado e as funções de atualização de forma modular e granular, permitindo uma maior flexibilidade na organização e na estruturação do seu código.
 
-### 5. **Menos dependências externas:** Zustand tem menos dependências externas do que o Redux e o Redux Toolkit, o que pode resultar em um pacote menor e menos vulnerabilidades de segurança.
+5. **Menos dependências externas:** Zustand tem menos dependências externas do que o Redux e o Redux Toolkit, o que pode resultar em um pacote menor e menos vulnerabilidades de segurança.
 
 Exemplo de Uso:
 
