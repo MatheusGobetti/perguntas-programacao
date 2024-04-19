@@ -529,7 +529,6 @@ export function addTask(task) {
 Reducer:
 
 ```js
-
 // reducer.js
 import { ADD_TASK } from './actions';
 
@@ -555,7 +554,6 @@ export function taskReducer(state = initialState, action) {
 Store:
 
 ```js
-
 // store.js
 import { createStore } from 'redux';
 import { taskReducer } from './reducer';
@@ -713,7 +711,7 @@ Além disso, a configuração da store no Redux Toolkit é feita através do mé
 
 Em resumo, o Redux Toolkit simplifica o desenvolvimento com Redux, reduzindo a quantidade de código necessário e fornecendo uma API mais intuitiva e concisa.
 
-## 10.2 Por que usar o Zustand ao invés do Redux ou Redux Toolkit?
+### 10.2 Por que usar o Zustand ao invés do Redux ou Redux Toolkit?
 
 Resposta: Usar o Zustand em vez do Redux ou Redux Toolkit pode ser preferível por algumas razões:
 
@@ -782,7 +780,7 @@ Neste exemplo:
 
 Este é apenas um exemplo simples de como você pode usar Zustand para gerenciamento de estado em uma aplicação React. Ele demonstra a simplicidade e concisão oferecidas por Zustand em comparação com outras bibliotecas de gerenciamento de estado mais robustas como Redux.
 
-## 10.3 O que é o React Query e quando devo usá-lo?
+### 10.3 O que é o React Query e quando devo usá-lo?
 
 Resposta: O React Query é uma biblioteca popular para gerenciamento de estado e caching de dados em aplicações React. Ele fornece uma maneira simples e poderosa de buscar, armazenar em cache, atualizar e sincronizar os dados do aplicativo com o servidor ou outras fontes de dados. O React Query simplifica o trabalho com APIs assíncronas, como solicitações HTTP, fornecendo uma interface simples e declarativa para buscar e manipular dados.
 
@@ -803,7 +801,6 @@ Use React Query quando:
 Exemplo:
 
 ```jsx
-
 import React from 'react';
 import { useQueryClient, useQuery, useMutation } from 'react-query';
 
@@ -870,6 +867,127 @@ export default TodoComponent;
 ```
 
 Neste exemplo, utilizamos useMutation para realizar a operação de adicionar tarefa. Após o sucesso da operação, atualizamos a cache da consulta 'task' para refletir a nova tarefa. Em seguida, na interface, exibimos a tarefa atual armazenada no localStorage.
+
+### 10.4 Zustand + React Query 
+
+Exemplo de uso de Zustand com React Query
+
+Este código é uma aplicação para adicionar e exibir tarefas. Ele usa duas bibliotecas diferentes: React Query para lidar com os dados da internet e Zustand para armazenar dados localmente no navegador.
+
+O arquivo TodoComponent.jsx é onde a mágica acontece. Ele mostra a tarefa atual na tela e tem um botão para adicionar uma nova tarefa. Quando você clica no botão, ele usa uma função especial chamada useAddTaskMutation do arquivo api.js para adicionar a tarefa à internet e armazená-la no navegador.
+
+O arquivo useTaskStore.js é como uma caixa de memória para guardar a tarefa. Ele mantém a tarefa atualizada sempre que você adiciona uma nova.
+
+O arquivo api.js é onde lidamos com a comunicação com a internet. Ele tem uma função para buscar a tarefa existente e uma função para adicionar uma nova tarefa. Quando uma nova tarefa é adicionada com sucesso, ele atualiza tanto a memória do navegador quanto a tarefa atual na tela.
+
+E por fim, o arquivo reactQueryConfig.js é onde configuramos o React Query para ser usado em toda a aplicação. Ele nos ajuda a gerenciar os dados de forma eficiente.
+
+No geral, este código torna fácil adicionar e ver tarefas, mantendo tudo organizado e eficiente.
+
+Veja ele abaixo:
+
+1. TodoComponent.jsx:
+
+```jsx
+import React from 'react';
+import { useQueryClient } from 'react-query';
+import useTaskStore from './useTaskStore';
+import { fetchTask, useAddTaskMutation } from './api';
+
+function TodoComponent() {
+  const queryClient = useQueryClient();
+  const task = useTaskStore((state) => state.task);
+  const addTaskMutation = useAddTaskMutation();
+
+  const handleAddTask = async () => {
+    try {
+      await addTaskMutation.mutateAsync();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  return (
+    <div>
+      <h1>Tarefa Atual</h1>
+      {task ? (
+        <div>
+          <p>{task.name}</p>
+          <p>{task.description}</p>
+        </div>
+      ) : (
+        <p>Nenhuma tarefa disponível</p>
+      )}
+      <button onClick={handleAddTask}>Adicionar Tarefa</button>
+    </div>
+  );
+}
+
+export default TodoComponent;
+
+```
+2. useTaskStore.js
+
+```js
+import create from 'zustand';
+
+const useTaskStore = create((set) => ({
+  task: null,
+  setTask: (newTask) => set({ task: newTask }),
+}));
+
+export default useTaskStore;
+
+```
+
+3. api.js
+
+```js
+import { useMutation, useQuery } from 'react-query';
+
+export const fetchTask = async () => {
+  const storedTask = localStorage.getItem('task');
+  return storedTask ? JSON.parse(storedTask) : null;
+};
+
+export const useAddTaskMutation = () => {
+  return useMutation(
+    async () => {
+      const response = await fetch('https://sua-api.com/tasks', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({}),
+      });
+      if (!response.ok) {
+        throw new Error('Erro ao adicionar tarefa');
+      }
+      return response.json();
+    },
+    {
+      onSuccess: (newTask) => {
+        queryClient.setQueryData('task', newTask);
+        useTaskStore.getState().setTask(newTask);
+        localStorage.setItem('task', JSON.stringify(newTask));
+      },
+    }
+  );
+};
+
+
+```
+
+4. reactQueryConfig.js
+
+```js
+import { useQueryClient } from 'react-query';
+
+const queryClient = new useQueryClient();
+
+export default queryClient;
+
+```
 
 ## 11. Explique a diferença entre null e undefined em JavaScript.
 
