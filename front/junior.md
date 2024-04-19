@@ -782,6 +782,95 @@ Neste exemplo:
 
 Este é apenas um exemplo simples de como você pode usar Zustand para gerenciamento de estado em uma aplicação React. Ele demonstra a simplicidade e concisão oferecidas por Zustand em comparação com outras bibliotecas de gerenciamento de estado mais robustas como Redux.
 
+## 10.3 O que é o React Query e quando devo usá-lo?
+
+Resposta: O React Query é uma biblioteca popular para gerenciamento de estado e caching de dados em aplicações React. Ele fornece uma maneira simples e poderosa de buscar, armazenar em cache, atualizar e sincronizar os dados do aplicativo com o servidor ou outras fontes de dados. O React Query simplifica o trabalho com APIs assíncronas, como solicitações HTTP, fornecendo uma interface simples e declarativa para buscar e manipular dados.
+
+Uma das principais vantagens do React Query é a sua abordagem baseada em hooks, que permite aos desenvolvedores incorporar facilmente funcionalidades de gerenciamento de estado e caching em componentes React. Ele também oferece recursos avançados, como invalidação de cache, refetching automático, paginacão e manipulação de erros, tornando-o uma escolha popular para aplicações React que dependem fortemente de dados assíncronos.
+
+Use React Query quando:
+
+- **Gerenciamento de dados assíncronos:** Você precisa lidar com chamadas de API e operações assíncronas para buscar, criar, atualizar ou excluir dados em sua aplicação. React Query oferece uma API intuitiva e eficiente para lidar com esses cenários, incluindo cache integrado, refetching automático e manipulação de estados de carregamento, erro e sucesso.
+
+- **Cache de dados integrado:** Você deseja aproveitar o sistema de cache integrado do React Query para reduzir o número de chamadas de rede redundantes e melhorar o desempenho e a responsividade da sua aplicação.
+
+- **Paginação e refetching:** Sua aplicação requer suporte para paginação de dados e refetching automático para manter os dados atualizados em tempo real.
+
+- **Integração com Suspense:** Você pretende utilizar o Suspense do React para suspender a renderização de componentes até que os dados estejam prontos, proporcionando uma experiência de usuário mais suave e responsiva.
+
+- **Requerimentos específicos da API:** Sua API utiliza estratégias de cache complexas, necessita de invalidação manual da cache, ou requer configurações específicas de headers ou autenticação.
+
+Exemplo:
+
+```jsx
+
+import React from 'react';
+import { useQueryClient, useQuery, useMutation } from 'react-query';
+
+// Função para buscar a tarefa do localStorage
+const fetchTask = async () => {
+  const storedTask = localStorage.getItem('task');
+  if (!storedTask) return null;
+  return JSON.parse(storedTask);
+};
+
+function TodoComponent() {
+  const queryClient = useQueryClient();
+
+  // Consulta React Query para buscar a tarefa
+  const { data: task } = useQuery('task', fetchTask);
+
+  // Mutation React Query para adicionar uma nova tarefa
+  const addTaskMutation = useMutation(async () => {
+    const response = await fetch('https://sua-api.com/tasks', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({}),
+    });
+    if (!response.ok) {
+      throw new Error('Erro ao adicionar tarefa');
+    }
+    const newTask = await response.json();
+    localStorage.setItem('task', JSON.stringify(newTask));
+    return newTask;
+  }, {
+    onSuccess: (newTask) => {
+      queryClient.setQueryData('task', newTask); // Atualiza a cache da consulta 'task' após adicionar uma nova tarefa
+    },
+  });
+
+  const handleAddTask = async () => {
+    try {
+      await addTaskMutation.mutateAsync();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  return (
+    <div>
+      <h1>Tarefa Atual</h1>
+      {task ? (
+        <div>
+          <p>{task.name}</p>
+          <p>{task.description}</p>
+        </div>
+      ) : (
+        <p>Nenhuma tarefa disponível</p>
+      )}
+      <button onClick={handleAddTask}>Adicionar Tarefa</button>
+    </div>
+  );
+}
+
+export default TodoComponent;
+
+```
+
+Neste exemplo, utilizamos useMutation para realizar a operação de adicionar tarefa. Após o sucesso da operação, atualizamos a cache da consulta 'task' para refletir a nova tarefa. Em seguida, na interface, exibimos a tarefa atual armazenada no localStorage.
+
 ## 11. Explique a diferença entre null e undefined em JavaScript.
 
 Resposta: null é um valor especial que representa a ausência intencional de um objeto, enquanto undefined é um valor que indica que uma variável não foi atribuída com um valor.
