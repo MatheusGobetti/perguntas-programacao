@@ -120,9 +120,8 @@ document.getElementById("myElement").innerHTML = "Hello, world!";
 
 JQuery:
 
-```jquery
+```js
 $("#myElement").html("Hello, world!");
-
 ```
 
 ## 5. O que é um Callback Hell?
@@ -553,7 +552,7 @@ export function taskReducer(state = initialState, action) {
 
 ```
 
-Store
+Store:
 
 ```js
 
