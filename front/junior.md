@@ -76,7 +76,6 @@ function myFunction() {
 }
 
 myFunction(); // Saída: 10
-
 ```
 
 Exemplo de escopo local:
@@ -115,7 +114,6 @@ Javascript:
 
 ```js
 document.getElementById("myElement").innerHTML = "Hello, world!";
-
 ```
 
 JQuery:
@@ -138,7 +136,6 @@ asyncFunction1(function() {
         });
     });
 });
-
 ```
 
 ## 6. O que é Cross-Site Scripting (XSS)?
@@ -173,13 +170,11 @@ Exemplo de XSS:
   </script>
 </body>
 </html>
-
 ```
 
 Se um invasor inserir o seguinte como seu nome:
 ```html
 <script>alert("XSS executado!");</script>
-
 ```
 Quando esse código for exibido na página, ele será executado como um script malicioso, exibindo um alerta com a mensagem "XSS executado!". Isso é apenas um exemplo básico para ilustrar o conceito de XSS. Em situações reais, os ataques XSS podem ser muito mais complexos e perigosos.
 
@@ -201,7 +196,6 @@ export function addToCart(item) {
     item
   };
 }
-
 ```
 2. Store: Mantém o estado da aplicação (carrinho de compras) e responde à ação de adicionar um item ao carrinho.
 
@@ -236,7 +230,6 @@ const cartStore = new CartStore();
 dispatcher.register(cartStore.handleActions.bind(cartStore));
 export default cartStore;
 
-
 ```
 
 3. Componentes React: Um componente de lista de produtos e um componente de carrinho de compras que despacha a ação de adicionar ao carrinho.
@@ -267,7 +260,6 @@ class ProductList extends React.Component {
 }
 
 export default ProductList;
-
 
 ```
 
@@ -307,7 +299,6 @@ class Cart extends React.Component {
 }
 
 export default Cart;
-
 
 ```
 
@@ -523,7 +514,6 @@ export function addTask(task) {
   };
 }
 
-
 ```
 
 Reducer:
@@ -548,7 +538,6 @@ export function taskReducer(state = initialState, action) {
   }
 }
 
-
 ```
 
 Store:
@@ -561,7 +550,6 @@ import { taskReducer } from './reducer';
 const store = createStore(taskReducer);
 
 export default store;
-
 
 ```
 
@@ -603,7 +591,6 @@ function TodoComponent() {
 }
 
 export default TodoComponent;
-
 
 ```
 
@@ -974,7 +961,6 @@ export const useAddTaskMutation = () => {
     }
   );
 };
-
 
 ```
 
