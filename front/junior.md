@@ -1,125 +1,125 @@
 # Perguntas de Programação
 
-## O que é SQL injection?
+1. O que é SQL injection?
 
-Resposta: A injeção de SQL é um tipo de ataque cibernético usado para explorar vulnerabilidades em sistemas de gerenciamento de banco de dados. Basicamente, os hackers inserem códigos maliciosos em campos de entrada, como formulários da web, para enganar o sistema e obter acesso não autorizado ao banco de dados.
+  Resposta: A injeção de SQL é um tipo de ataque cibernético usado para explorar vulnerabilidades em sistemas de gerenciamento de banco de dados. Basicamente, os hackers inserem códigos maliciosos em campos de entrada, como formulários da web, para enganar o sistema e obter acesso não autorizado ao banco de dados.
 
-Por exemplo, imagine um site de login onde você digita seu nome de usuário e senha. Se o site não tiver proteção adequada contra injeção de SQL, um invasor poderia digitar algo como " ' OR '1'='1" no campo de senha. Isso pode enganar o sistema, fazendo com que ele interprete a entrada como uma parte legítima da consulta SQL, permitindo ao invasor acessar o sistema sem a senha correta.
+  Por exemplo, imagine um site de login onde você digita seu nome de usuário e senha. Se o site não tiver proteção adequada contra injeção de SQL, um invasor poderia digitar algo como " ' OR '1'='1" no campo de senha. Isso pode enganar o sistema, fazendo com que ele interprete a entrada como uma parte legítima da consulta SQL, permitindo ao invasor acessar o sistema sem a senha correta.
 
-Em resumo, a injeção de SQL é como um "truque" usado por hackers para enganar sistemas de banco de dados e obter acesso não autorizado ou manipular informações.
+  Em resumo, a injeção de SQL é como um "truque" usado por hackers para enganar sistemas de banco de dados e obter acesso não autorizado ou manipular informações.
 
-## O que é escopo em JavaScript?
+2. O que é escopo em JavaScript?
 
-Resposta:
+  Resposta:
 
-## Explique o CSS "box model" e os componentes de layout que o compõem.
+3. Explique o CSS "box model" e os componentes de layout que o compõem.
 
-Resposta:
+  Resposta:
 
-## Como JavaScript e jQuery são diferentes?
+4. Como JavaScript e jQuery são diferentes?
 
-Resposta:
+  Resposta:
 
-## O que é um Callback Hell?
+5. O que é um Callback Hell?
 
-Resposta:
+  Resposta:
 
-## O que é Cross-Site Scripting (XSS)?
+6. O que é Cross-Site Scripting (XSS)?
 
-Resposta:
+  Resposta:
 
-## O que é Flux?
+7. O que é Flux?
 
-Resposta:
+  Resposta:
 
-## O que é Sass?
+8. O que é Sass?
 
-Resposta:
+  Resposta:
 
-## O que é encapsulamento?
+9. O que é encapsulamento?
 
-Resposta:
+  Resposta:
 
-## Qual o ponto de se usar Redux?
+10. Qual o ponto de se usar Redux?
 
-Resposta:
+   Resposta:
 
-## Explique a diferença entre null e undefined em JavaScript.
+11. Explique a diferença entre null e undefined em JavaScript.
 
-Resposta:
+   Resposta:
 
-## Liste as vantagens da arquitetura de microsserviços.
+12. Liste as vantagens da arquitetura de microsserviços.
 
-Resposta:
+   Resposta:
 
-## Quais são as vantagens do NoSQL sobre o RDBMS tradicional?
+13. Quais são as vantagens do NoSQL sobre o RDBMS tradicional?
 
-Resposta:
+   Resposta:
 
-## O que é programação reativa?
+14. O que é programação reativa?
 
-Resposta:
+   Resposta:
 
-## O que são os reducers no Redux?
+15. O que são os reducers no Redux?
 
-Resposta:
+   Resposta:
 
-## Qual o papel do HTML na indexação de páginas por buscadores?
+16. Qual o papel do HTML na indexação de páginas por buscadores?
 
-Resposta:
+   Resposta:
 
-## Cite 3 conceitos da Programação Orientada a Objetos aplicada ao JavaScript.
+17. Cite 3 conceitos da Programação Orientada a Objetos aplicada ao JavaScript.
 
-Resposta:
+   Resposta:
 
-## Quais os benefícios do TypeScript?
+18. Quais os benefícios do TypeScript?
 
-Resposta:
+   Resposta:
 
-## O que é uma interface no TypeScript?
+19. O que é uma interface no TypeScript?
 
-Resposta:
+   Resposta:
 
-## Qual o significado de Mock?
+20. Qual o significado de Mock?
 
-Resposta:
+   Resposta:
 
-## O que é o esquema do GraphQL?
+21. O que é o esquema do GraphQL?
 
-Resposta:
+   Resposta:
 
-## O que é o Virtual DOM? Qual sua vantagem?
+22. O que é o Virtual DOM? Qual sua vantagem?
 
-Resposta:
+   Resposta:
 
-## O que é e como usar a convenção Block Element Modifier (BEM)?
+23. O que é e como usar a convenção Block Element Modifier (BEM)?
 
-Resposta:
+   Resposta:
 
-## JavaScript: Explique como você pode usar funções JavaScript, como forEach, Map ou Reduce.
+24. JavaScript: Explique como você pode usar funções JavaScript, como forEach, Map ou Reduce.
 
-Resposta:
+   Resposta:
 
-## React: O que é e como você pode aproveitar as vantagens do PureComponent?
+25. React: O que é e como você pode aproveitar as vantagens do PureComponent?
 
-Resposta:
+   Resposta:
 
-## O que é serverless computing?
+26. O que é serverless computing?
 
-Resposta:
+   Resposta:
 
-## Quais são os tipos primitivos do JavaScript?
+27. Quais são os tipos primitivos do JavaScript?
 
-Resposta:
+   Resposta:
 
-## Qual a diferença entre inline e inline-block?
+28. Qual a diferença entre inline e inline-block?
 
-Resposta:
+   Resposta:
 
-## Qual a diferença entre elementos posicionados como relative, fixed, absolute e static?
+29. Qual a diferença entre elementos posicionados como relative, fixed, absolute e static?
 
-Resposta:
+   Resposta:
 
-## Você pode explicar a diferença entre codificar um site para ser responsivo e usar uma estratégia mobile-first?
+30. Você pode explicar a diferença entre codificar um site para ser responsivo e usar uma estratégia mobile-first?
 
-Resposta:
+   Resposta:
